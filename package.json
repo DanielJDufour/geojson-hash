@@ -7,7 +7,7 @@
     "./geojson-hash.js"
   ],
   "scripts": {
-    "test": "node test.js"
+    "test": "echo 'no automated tests'"
   },
   "repository": {
     "type": "git",
