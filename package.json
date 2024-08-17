@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Compute Hash for Each GeoJSON Primitive",
   "main": "geojson-hash.js",
+  "files": [
+    "./geojson-hash.js"
+  ],
   "scripts": {
     "test": "node test.js"
   },
