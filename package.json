@@ -1,6 +1,6 @@
 {
   "name": "geojson-hash",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Compute Hash for Each GeoJSON Primitive",
   "main": "geojson-hash.js",
   "files": [
