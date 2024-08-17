@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/flug"></script>
+    <script src="./geojson-hash.js"></script>
+    <script>
+      window.app = {};
+    </script>
+  </head>
+  <body>
+    <h1>geojson-hash</h1>
+    <label for="geojson">Drop your GeoJSON File below</label>
+    <br/>
+    <input type="file" id="geojson">
+    <br/>
+    <label>Result</label>
+    <textarea id="result" style="width: 100%; height: 500px;"></textarea>
+    <script>
+      document.getElementById("geojson").addEventListener("input", function (event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function () {
+          const contents = reader.result;
+          const data = JSON.parse(reader.result);
+          console.log("data:", data);
+          const hashes = geojson_hash(data);
+          console.log("hashes:", hashes);
+          document.getElementById("result").value = JSON.stringify(hashes, undefined, 2);
+        };
+        reader.readAsText(file);
+      });
+    </script>
+  </body>
+</html>
