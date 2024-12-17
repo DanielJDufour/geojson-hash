@@ -5,7 +5,7 @@
 - compute hash for each polygon in multipolygon
 
 ## demo
-tbd
+https://danieljdufour.com/geojson-hash/
 
 ## usage
 ```js
